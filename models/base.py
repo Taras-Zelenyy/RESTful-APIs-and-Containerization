@@ -49,6 +49,7 @@ class Model(object):
         obj = cls.query.get(row_id)
         if obj:
             db.session.delete(obj)
+            db.session.commit()
             return 1
         return 0
 
